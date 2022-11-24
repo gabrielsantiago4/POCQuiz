@@ -9,13 +9,14 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    let quizView: QuizView = QuizView()
 
-        view.backgroundColor = .red
-        // Do any additional setup after loading the view.
+    override func loadView() {
+        view = quizView
     }
 
-
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
 }
 
