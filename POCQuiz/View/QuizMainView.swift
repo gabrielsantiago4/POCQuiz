@@ -1,5 +1,5 @@
 //
-//  QuizView.swift
+//  TesteView.swift
 //  POCQuiz
 //
 //  Created by Gabriel Santiago on 24/11/22.
@@ -9,17 +9,13 @@ import UIKit
 
 class QuizMainView: UIView {
     
-    var didTapOnButtonHandler: (() -> Void)?
-    
-    lazy var startQuizButton = make(UIButton()) {
-        $0.addTarget(self, action: #selector(QuizMainView.navigationButton), for: .touchUpInside)
-        $0.setTitleColor(UIColor.blue, for: .normal)
+    lazy var label = make(UILabel()) {
         $0.translatesAutoresizingMaskIntoConstraints = false
-        $0.layer.masksToBounds = true
-        $0.layer.cornerRadius = 10
-        $0.setTitle("Botao", for: .normal)
+        $0.font = .systemFont(ofSize: 30)
+        $0.textColor = .red
+        $0.text = "O TESTE"
     }
-    
+
     override init(frame: CGRect) {
         super.init(frame: frame)
         buildLayout()
@@ -29,9 +25,6 @@ class QuizMainView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    @objc func navigationButton() {
-        didTapOnButtonHandler?()
-    }
 }
 
 extension QuizMainView: ViewCoding {
@@ -40,16 +33,15 @@ extension QuizMainView: ViewCoding {
     }
     
     func setupHierarchy() {
-        backgroundColor = .systemBackground
-        addSubview(startQuizButton)
+        addSubview(label)
     }
     
     func setupConstraints() {
         
         NSLayoutConstraint.activate([
-            
-            startQuizButton.centerYAnchor.constraint(equalTo: centerYAnchor),
-            startQuizButton.centerXAnchor.constraint(equalTo: centerXAnchor)
+            label.centerXAnchor.constraint(equalTo: centerXAnchor),
+            label.centerYAnchor.constraint(equalTo: centerYAnchor)
+        
         ])
     }
 }

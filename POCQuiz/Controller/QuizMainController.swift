@@ -7,11 +7,11 @@
 
 import UIKit
 
-class TesteViewController: UIViewController {
+class QuizMainController: UIViewController {
     
-    let testeView = TesteView()
+    let quizMainController = QuizMainView()
 
     override func loadView() {
-        self.view = testeView
+        self.view = quizMainController
     }
 }

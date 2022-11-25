@@ -7,14 +7,14 @@
 
 import UIKit
 
-class QuizViewController: UIViewController {
+class QuizButtonController: UIViewController {
     
-    let quizMainView = QuizMainView()
+    let quizButtonView = QuizButtonView()
     
     override func loadView() {
-        self.view = quizMainView
-        quizMainView.didTapOnButtonHandler = { [weak self] in
-            let nextViewController = TesteViewController()
+        self.view = quizButtonView
+        quizButtonView.didTapOnButtonHandler = { [weak self] in
+            let nextViewController = QuizMainController()
             self?.navigationController?.pushViewController(nextViewController, animated: true)
         }
     }
