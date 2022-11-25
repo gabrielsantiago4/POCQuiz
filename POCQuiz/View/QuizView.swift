@@ -18,6 +18,16 @@ class QuizView: UIView {
         $0.text = "O poder judiciário é responsável por criar leis."
     }
 
+    lazy var trueButton = make(QuizButton()) {
+        $0.translatesAutoresizingMaskIntoConstraints = false
+        $0.textButton = "Verdadeiro"
+    }
+
+    lazy var falseButton = make(QuizButton()) {
+        $0.textButton = "Falso"
+        $0.translatesAutoresizingMaskIntoConstraints = false
+    }
+
     override init(frame: CGRect) {
         super.init(frame: frame)
         buildLayout()
@@ -36,13 +46,24 @@ extension QuizView: ViewCoding {
 
     func setupHierarchy() {
         addSubview(questionLabel)
+        addSubview(trueButton)
+        addSubview(falseButton)
     }
 
     func setupConstraints() {
         NSLayoutConstraint.activate([
+            // question constraints
             questionLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 15),
             questionLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -15),
-            questionLabel.topAnchor.constraint(equalTo: self.centerYAnchor)
+            questionLabel.topAnchor.constraint(equalTo: self.centerYAnchor),
+            // button constraints
+            trueButton.topAnchor.constraint(equalTo: questionLabel.bottomAnchor, constant: 20),
+            trueButton.widthAnchor.constraint(equalTo: self.widthAnchor, multiplier: 0.4),
+            trueButton.centerXAnchor.constraint(equalTo: self.centerXAnchor),
+            // false constraints
+            falseButton.topAnchor.constraint(equalTo: trueButton.bottomAnchor, constant: 15),
+            falseButton.widthAnchor.constraint(equalTo: self.widthAnchor, multiplier: 0.4),
+            falseButton.centerXAnchor.constraint(equalTo: self.centerXAnchor)
         ])
     }
 }
