@@ -9,21 +9,24 @@ import UIKit
 
 class QuizView: UIView {
 
+    var didTapAnswerButton: ((_ answer: Bool) -> Void)?
+
     lazy var questionLabel = make(UILabel()) {
         $0.textAlignment = .center
         $0.numberOfLines = 0
         $0.font = .systemFont(ofSize: 24)
         $0.translatesAutoresizingMaskIntoConstraints = false
         $0.textColor = .systemGray
-        $0.text = "O poder judiciário é responsável por criar leis."
     }
 
     lazy var trueButton = make(QuizButton()) {
+        $0.addTarget(self, action: #selector(trueButtonSelected), for: .touchUpInside)
         $0.translatesAutoresizingMaskIntoConstraints = false
         $0.textButton = "Verdadeiro"
     }
 
     lazy var falseButton = make(QuizButton()) {
+        $0.addTarget(self, action: #selector(falseButtonSelected), for: .touchUpInside)
         $0.textButton = "Falso"
         $0.translatesAutoresizingMaskIntoConstraints = false
     }
@@ -35,6 +38,17 @@ class QuizView: UIView {
 
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+
+    func configureView(model: Quiz) {
+        self.questionLabel.text = model.question.textQuestion
+    }
+
+    @objc func trueButtonSelected() {
+        didTapAnswerButton?(true)
+    }
+    @objc func falseButtonSelected() {
+        didTapAnswerButton?(false)
     }
 
 }

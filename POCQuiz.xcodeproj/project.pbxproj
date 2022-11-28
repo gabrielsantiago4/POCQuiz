@@ -10,6 +10,9 @@
 		B993557829343EF700AE1038 /* QuizMainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B993557729343EF700AE1038 /* QuizMainController.swift */; };
 		B993557A29343F1800AE1038 /* QuizMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B993557929343F1800AE1038 /* QuizMainView.swift */; };
 		B993557E29343F5800AE1038 /* QuizButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B993557D29343F5800AE1038 /* QuizButtonView.swift */; };
+		B9935581293441F800AE1038 /* Quiz.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9935580293441F800AE1038 /* Quiz.swift */; };
+		B99355832934425700AE1038 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = B99355822934425700AE1038 /* Question.swift */; };
+		B993559329344B8700AE1038 /* QuizValidateTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B993559229344B8700AE1038 /* QuizValidateTest.swift */; };
 		B9A35A48292FAC4C004169DA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9A35A47292FAC4C004169DA /* AppDelegate.swift */; };
 		B9A35A4A292FAC4C004169DA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9A35A49292FAC4C004169DA /* SceneDelegate.swift */; };
 		B9A35A4C292FAC4C004169DA /* QuizButtonController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9A35A4B292FAC4C004169DA /* QuizButtonController.swift */; };
@@ -21,10 +24,24 @@
 		B9A35A672930DC33004169DA /* QuizButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9A35A662930DC33004169DA /* QuizButton.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		B993558D29344B5600AE1038 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B9A35A3C292FAC4C004169DA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B9A35A43292FAC4C004169DA;
+			remoteInfo = POCQuiz;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		B993557729343EF700AE1038 /* QuizMainController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizMainController.swift; sourceTree = "<group>"; };
 		B993557929343F1800AE1038 /* QuizMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizMainView.swift; sourceTree = "<group>"; };
 		B993557D29343F5800AE1038 /* QuizButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizButtonView.swift; sourceTree = "<group>"; };
+		B9935580293441F800AE1038 /* Quiz.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quiz.swift; sourceTree = "<group>"; };
+		B99355822934425700AE1038 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
+		B993558929344B5600AE1038 /* POCQuizTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = POCQuizTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B993559229344B8700AE1038 /* QuizValidateTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizValidateTest.swift; sourceTree = "<group>"; };
 		B9A35A44292FAC4C004169DA /* POCQuiz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = POCQuiz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9A35A47292FAC4C004169DA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B9A35A49292FAC4C004169DA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -39,6 +56,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		B993558629344B5600AE1038 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B9A35A41292FAC4C004169DA /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -49,10 +73,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B993557F293441ED00AE1038 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B9935580293441F800AE1038 /* Quiz.swift */,
+				B99355822934425700AE1038 /* Question.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		B993558A29344B5600AE1038 /* POCQuizTests */ = {
+			isa = PBXGroup;
+			children = (
+				B993559229344B8700AE1038 /* QuizValidateTest.swift */,
+			);
+			path = POCQuizTests;
+			sourceTree = "<group>";
+		};
 		B9A35A3B292FAC4C004169DA = {
 			isa = PBXGroup;
 			children = (
 				B9A35A46292FAC4C004169DA /* POCQuiz */,
+				B993558A29344B5600AE1038 /* POCQuizTests */,
 				B9A35A45292FAC4C004169DA /* Products */,
 			);
 			sourceTree = "<group>";
@@ -61,6 +103,7 @@
 			isa = PBXGroup;
 			children = (
 				B9A35A44292FAC4C004169DA /* POCQuiz.app */,
+				B993558929344B5600AE1038 /* POCQuizTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -68,6 +111,7 @@
 		B9A35A46292FAC4C004169DA /* POCQuiz */ = {
 			isa = PBXGroup;
 			children = (
+				B993557F293441ED00AE1038 /* Model */,
 				B9A35A65292FB1D7004169DA /* Protocol */,
 				B9A35A62292FAF9D004169DA /* Utils */,
 				B9A35A5F292FAF38004169DA /* Delegate */,
@@ -128,6 +172,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		B993558829344B5600AE1038 /* POCQuizTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B993558F29344B5600AE1038 /* Build configuration list for PBXNativeTarget "POCQuizTests" */;
+			buildPhases = (
+				B993558529344B5600AE1038 /* Sources */,
+				B993558629344B5600AE1038 /* Frameworks */,
+				B993558729344B5600AE1038 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B993558E29344B5600AE1038 /* PBXTargetDependency */,
+			);
+			name = POCQuizTests;
+			productName = POCQuizTests;
+			productReference = B993558929344B5600AE1038 /* POCQuizTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		B9A35A43292FAC4C004169DA /* POCQuiz */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = B9A35A58292FAC4D004169DA /* Build configuration list for PBXNativeTarget "POCQuiz" */;
@@ -155,6 +217,10 @@
 				LastSwiftUpdateCheck = 1400;
 				LastUpgradeCheck = 1400;
 				TargetAttributes = {
+					B993558829344B5600AE1038 = {
+						CreatedOnToolsVersion = 14.0;
+						TestTargetID = B9A35A43292FAC4C004169DA;
+					};
 					B9A35A43292FAC4C004169DA = {
 						CreatedOnToolsVersion = 14.0;
 					};
@@ -174,11 +240,19 @@
 			projectRoot = "";
 			targets = (
 				B9A35A43292FAC4C004169DA /* POCQuiz */,
+				B993558829344B5600AE1038 /* POCQuizTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		B993558729344B5600AE1038 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B9A35A42292FAC4C004169DA /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -191,6 +265,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		B993558529344B5600AE1038 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B993559329344B8700AE1038 /* QuizValidateTest.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B9A35A40292FAC4C004169DA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -202,13 +284,23 @@
 				B9A35A5D292FAF29004169DA /* QuizView.swift in Sources */,
 				B9A35A672930DC33004169DA /* QuizButton.swift in Sources */,
 				B9A35A61292FAF57004169DA /* ViewCoding.swift in Sources */,
+				B9935581293441F800AE1038 /* Quiz.swift in Sources */,
 				B9A35A48292FAC4C004169DA /* AppDelegate.swift in Sources */,
+				B99355832934425700AE1038 /* Question.swift in Sources */,
 				B9A35A4A292FAC4C004169DA /* SceneDelegate.swift in Sources */,
 				B9A35A64292FAFB3004169DA /* Util.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B993558E29344B5600AE1038 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B9A35A43292FAC4C004169DA /* POCQuiz */;
+			targetProxy = B993558D29344B5600AE1038 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		B9A35A52292FAC4D004169DA /* LaunchScreen.storyboard */ = {
@@ -222,6 +314,42 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		B993559029344B5600AE1038 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 949BRFMFQG;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ifce.academy.POCQuizTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/POCQuiz.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/POCQuiz";
+			};
+			name = Debug;
+		};
+		B993559129344B5600AE1038 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 949BRFMFQG;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ifce.academy.POCQuizTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/POCQuiz.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/POCQuiz";
+			};
+			name = Release;
+		};
 		B9A35A56292FAC4D004169DA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -395,6 +523,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		B993558F29344B5600AE1038 /* Build configuration list for PBXNativeTarget "POCQuizTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B993559029344B5600AE1038 /* Debug */,
+				B993559129344B5600AE1038 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		B9A35A3F292FAC4C004169DA /* Build configuration list for PBXProject "POCQuiz" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

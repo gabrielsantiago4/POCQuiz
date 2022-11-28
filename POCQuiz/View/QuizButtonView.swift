@@ -12,12 +12,12 @@ class QuizButtonView: UIView {
     var didTapOnButtonHandler: (() -> Void)?
     
     lazy var startQuizButton = make(UIButton()) {
+        $0.configuration = .bordered()
         $0.addTarget(self, action: #selector(QuizButtonView.navigationButton), for: .touchUpInside)
-        $0.setTitleColor(UIColor.blue, for: .normal)
         $0.translatesAutoresizingMaskIntoConstraints = false
         $0.layer.masksToBounds = true
         $0.layer.cornerRadius = 10
-        $0.setTitle("Botao", for: .normal)
+        $0.setTitle("Ir para quiz", for: .normal)
     }
     
     override init(frame: CGRect) {
@@ -36,20 +36,20 @@ class QuizButtonView: UIView {
 
 extension QuizButtonView: ViewCoding {
     func setupView() {
-        //
+        backgroundColor = .systemBackground
     }
     
     func setupHierarchy() {
-        backgroundColor = .systemBackground
+
         addSubview(startQuizButton)
     }
     
     func setupConstraints() {
-        
         NSLayoutConstraint.activate([
-            
             startQuizButton.centerYAnchor.constraint(equalTo: centerYAnchor),
-            startQuizButton.centerXAnchor.constraint(equalTo: centerXAnchor)
+            startQuizButton.centerXAnchor.constraint(equalTo: centerXAnchor),
+            startQuizButton.heightAnchor.constraint(equalToConstant: 35),
+            startQuizButton.widthAnchor.constraint(equalToConstant: 160)
         ])
     }
 }
