@@ -9,7 +9,7 @@ import UIKit
 
 class QuizMainController: UIViewController {
     
-    let quizMainController = QuizMainView()
+    let quizMainController = QuizView()
 
     override func loadView() {
         self.view = quizMainController
